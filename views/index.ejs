@@ -1,0 +1,13 @@
+<% include ./partials/header.ejs %>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+<form method="post">
+    <script src="https://checkout.stripe.com/checkout.js"
+            class="stripe-button"
+            data-key='pk_test_UU0oFeGrfYnHugXND11otmlg'
+            data-locale="auto"
+            data-description="Sample Charge"
+            data-amount="500"></script>
+</form>
+
+<% include ./partials/footer.ejs %>

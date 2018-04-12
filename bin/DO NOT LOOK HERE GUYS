@@ -1,0 +1,12 @@
+.post((req, res, next) => {
+    var stripe = require('stripe')("sk_test_BQokikJOvBiI2HlWgH4olfQ2");
+    stripe.charges.create({
+        amount: 500,
+        currency: 'pln',
+        source: 'tok_visa',
+        description: 'Our example'
+    }).then(cha => {
+        console.log(cha);
+        res.redirect('/');
+    }).catch(e => console.log(e));
+});
