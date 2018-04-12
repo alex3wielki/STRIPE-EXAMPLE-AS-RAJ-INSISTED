@@ -1,13 +1,16 @@
 <% include ./partials/header.ejs %>
-<h1><%= title %></h1>
+
+<h1>Buy my dildo</h1>
 <p>Welcome to <%= title %></p>
 <form method="post">
-    <script src="https://checkout.stripe.com/checkout.js"
-            class="stripe-button"
-            data-key='pk_test_UU0oFeGrfYnHugXND11otmlg'
-            data-locale="auto"
-            data-description="Sample Charge"
-            data-amount="500"></script>
+    <h3>Subscribe</h3>
+    <select name="amount" id="">
+        <option value="500">A week</option>
+        <option value="1000">A month</option>
+        <option value="1500">Six months</option>
+    </select>
+    <br>
+    <button type="submit"> With all respect. Please sir, proceed </button>
 </form>
 
 <% include ./partials/footer.ejs %>
