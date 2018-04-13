@@ -1080448,7 +1080448,7 @@
 // DON'T LOOK DOWN GUYS. THAT'S CHEATING...
     .post((req, res, next) => {
         var amount = req.body.amount;
-        res.render('total', {title: 'Confirm the purchase sir', amount: amount})
+        res.render('total', {title: 'Please, click button below to proceed.', amount: amount})
     });
 
 
@@ -1080463,10 +1080463,10 @@ router.route('/pay')
             description: 'Our example'
         }).then(cha => {
             console.log(cha);
-            res.render('paid', {title: 'Thank you dildo xD'});
+            res.render('paid', {title: 'Thank you!'});
         }).catch(e => {
             console.log(e);
-            res.render('not-paid', {title: 'Nope'})
+            res.render('not-paid', {'Payment is not Processed'})
         });
     });
 
